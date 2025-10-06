@@ -17,21 +17,21 @@
     Activity.hidden = true;
   }
   
-  window.ToDayOfSSCC = function(){
+  window.ToTutorial = function(){
     HomeText.hidden = true;
     DayOfSSCC.hidden = false;
     RoomOfMembers.hidden = true;
     Activity.hidden = true;
   }
   
-  window.ToRoomOfMembers = function(){
+  window.ToData = function(){
     HomeText.hidden = true;
     DayOfSSCC.hidden = true;
     RoomOfMembers.hidden = false;
     Activity.hidden = true;
   }
 
-  window.ToActivity = function(){
+  window.ToElse = function(){
     HomeText.hidden = true;
     DayOfSSCC.hidden = true;
     RoomOfMembers.hidden = true;
