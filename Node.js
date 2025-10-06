@@ -1,40 +1,40 @@
-  const HomeText = document.getElementById('Home');
-  const DayOfSSCC = document.getElementById("The_Day_Of_SSCC");
-  const RoomOfMembers = document.getElementById("Page_For_Members");
-  const Activity = document.getElementById("Activity");
+  const Home = document.getElementById('Home');
+  const Tutorial = document.getElementById("Tutorial");
+  const Data = document.getElementById("Data");
+  const Else = document.getElementById("Else");
 
   window.onload =function(){
-    HomeText.hidden = false;
-    DayOfSSCC.hidden = true;
-    RoomOfMembers.hidden = true;
-    Activity.hidden = true;
+    Home.hidden = false;
+    Tutorial.hidden = true;
+    Data.hidden = true;
+    Else.hidden = true;
   }
   
   window.ToHome = function(){
-    HomeText.hidden = false;
-    DayOfSSCC.hidden = true;
-    RoomOfMembers.hidden = true;
-    Activity.hidden = true;
+    Home.hidden = false;
+    Tutorial.hidden = true;
+    Data.hidden = true;
+    Else.hidden = true;
   }
   
   window.ToTutorial = function(){
-    HomeText.hidden = true;
-    DayOfSSCC.hidden = false;
-    RoomOfMembers.hidden = true;
-    Activity.hidden = true;
+    Home.hidden = true;
+    Tutorial.hidden = false;
+    Data.hidden = true;
+    Else.hidden = true;
   }
   
   window.ToData = function(){
-    HomeText.hidden = true;
-    DayOfSSCC.hidden = true;
-    RoomOfMembers.hidden = false;
-    Activity.hidden = true;
+    Home.hidden = true;
+    Tutorial.hidden = true;
+    Data.hidden = false;
+    Else.hidden = true;
   }
 
   window.ToElse = function(){
-    HomeText.hidden = true;
-    DayOfSSCC.hidden = true;
-    RoomOfMembers.hidden = true;
-    Activity.hidden = false;
+    Home.hidden = true;
+    Tutorial.hidden = true;
+    Data.hidden = true;
+    Else.hidden = false;
 };
 
