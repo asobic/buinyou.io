@@ -1,0 +1,56 @@
+body{
+    /*background: transparent;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent;*/
+      background: radial-gradient(at 20% 70%, #83cde7, transparent), radial-gradient(at 50% 30%, #f480d5, transparent), radial-gradient(at 80% 80%, #b7f179, transparent);
+  /*background-attachment: fixed;
+  border: 0;
+  color: white;
+  overflow: auto */
+  background-size: cover;
+}
+.heading{
+  display: flex;
+}
+
+button{
+  color: #333;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.Buttons{
+  display: flex;
+}
+.Greeting{
+  text-align: center;
+}
+
+.About_Us{
+  text-align: left;
+}
+
+.What_We_Do{
+  text-align: right;
+}
+
+a{
+    color: blie;
+}
+
+footer{
+    background-color: navy;
+    background-size: cover;
+    padding-right: 24px;
+    padding-left: 24px;
+    color: white;
+}
