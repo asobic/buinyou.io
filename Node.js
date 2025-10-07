@@ -38,7 +38,7 @@
     GamePost.hidden = false;
 }
 
-  window.FormEnterd = function()｛
+  window.FormEntered = function()｛
     var name = document.getElementById("name")
     var creator = document.getElementById("creator")
     var gameDiscription = document.getElementById("gameDiscription")
