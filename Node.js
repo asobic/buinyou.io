@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
   const Home = document.getElementById('Home');
   const Tutorial = document.getElementById("Tutorial");
   const Data = document.getElementById("Data");
@@ -48,5 +49,5 @@ window.FormEntered = function() {
     `<p>作品名：${name ? name.value : ""}<br>制作者名：${creator ? creator.value : ""}<br>ロゴ画像：<br>作品URL：${gameURL ? gameURL.value : ""}</p>`
   );
 };
-｝
+});
 
