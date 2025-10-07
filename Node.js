@@ -7,7 +7,7 @@
     Home.hidden = false;
     Tutorial.hidden = true;
     Data.hidden = true;
-    Else.hidden = true;
+    GamePost.hidden = true;
   }
   
   window.ToHome = function(){
