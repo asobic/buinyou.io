@@ -39,9 +39,9 @@
 }
 
   window.FormEnterd = function()｛
-    var name = getElementById("name")
-    var creator = getElementById("creator")
-    var gameDiscription = getElementById("gameDiscription")
-    var gameURL = getElementById("gameURL")
+    var name = document.getElementById("name")
+    var creator = document.getElementById("creator")
+    var gameDiscription = document.getElementById("gameDiscription")
+    var gameURL = document.getElementById("gameURL")
 ｝
 
