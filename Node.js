@@ -36,5 +36,8 @@
     Tutorial.hidden = true;
     Data.hidden = true;
     GamePost.hidden = false;
-};
+}
+
+  window.FormEnterd = function()｛
+｝
 
