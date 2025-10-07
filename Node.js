@@ -43,5 +43,7 @@
     var creator = document.getElementById("creator")
     var gameDiscription = document.getElementById("gameDiscription")
     var gameURL = document.getElementById("gameURL")
+    const element =  document.getElementById("basic")
+    element.insertAdjacentHTML("afterend","<p>作品名：${name.value}<br>制作者名：${creator.value}<br>ロゴ画像：<br>作品URL：${gameURL.value}")
 ｝
 
