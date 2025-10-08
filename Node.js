@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const element = document.getElementById("basic");
+    const element = document.getElementById('basic');
   let num = 1;
   while (true){
-    if (localStorage.getItem("key${num}") !== null){
+    if (localStorage.getItem('key${num}') !== null){
       element.insertAdjacentHTML("afterend", localStorage.getItem("key${num}"));
       num = num + 1;
 }
