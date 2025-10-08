@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
     Data.hidden = true;
     GamePost.hidden = false;
 };
+v
+let i = 1
 window.FormEntered = function() {
   var name = document.getElementById("name");
   var creator = document.getElementById("creator");
@@ -60,7 +62,9 @@ const htmlContent = `
 
 element.insertAdjacentHTML("afterend", htmlContent);
 
-localStorage.setItem(workname,htmlContent)
+localStorage.setItem("key${i}",htmlContent)
 };
+
+i = i + 1
 });
 
