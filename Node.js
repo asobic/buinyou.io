@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const element = document.getElementById("basic");
   let num = 1;
   while (true){
+    if (localStorage.getItem("key${num}") !== num){
+      element.insertAdjacentHTML("afterend", localStorage.getItem("key${num}");
+}
+    else{
+      break;
+}
+  }
     
   const Home = document.getElementById('Home');
   const Tutorial = document.getElementById("Tutorial");
@@ -69,6 +77,6 @@ localStorage.setItem("key${i}",htmlContent)
 };
 
 i = i + 1;
-localstorage.setItem("numbers",i);
+localStorage.setItem("numbers",i);
 });
 
