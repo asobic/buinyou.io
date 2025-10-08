@@ -58,7 +58,9 @@ const htmlContent = `
   </p>
 `;
 
-storage.store = element.insertAdjacentHTML("afterend", htmlContent);
+element.insertAdjacentHTML("afterend", htmlContent);
+
+localStorage.setItem(workname,htmlContent)
 };
 });
 
