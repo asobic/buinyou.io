@@ -66,5 +66,6 @@ localStorage.setItem("key${i}",htmlContent)
 };
 
 i = i + 1
+localStorage.clear();
 });
 
