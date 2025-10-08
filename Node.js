@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const element = document.getElementById('basic');
+    <!−−const element = document.getElementById('basic');
   let num = 1;
   while (true){
     if (localStorage.getItem('key${num}') !== null){
@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
       break;
 }
   }
+-->
     
   const Home = document.getElementById('Home');
   const Tutorial = document.getElementById("Tutorial");
@@ -74,10 +75,11 @@ const htmlContent = `
 
 element.insertAdjacentHTML("afterend", htmlContent);
 
-localStorage.setItem("key${i}",htmlContent)
+<!--localStorage.setItem("key${i}",htmlContent)
 
 i = i + 1;
 localStorage.setItem('numbers',i);
+-->
 };
 });
 
