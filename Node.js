@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-localStorage.setItem("numbers",1)
     const element = document.getElementById('basic');
   let num = 1;
   while (true){
@@ -52,7 +51,7 @@ localStorage.setItem("numbers",1)
     GamePost.hidden = false;
 };
 
-let i = 1
+let i = localStorage.getItem("numbers");
 window.FormEntered = function() {
   var name = document.getElementById("name");
   var creator = document.getElementById("creator");
@@ -77,7 +76,7 @@ element.insertAdjacentHTML("afterend", htmlContent);
 
 localStorage.setItem("key${i}",htmlContent)
 
-i = i;
+i = i + 1;
 localStorage.setItem('numbers',i);
 };
 });
