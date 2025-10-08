@@ -75,9 +75,9 @@ const htmlContent = `
 element.insertAdjacentHTML("afterend", htmlContent);
 
 localStorage.setItem("key${i}",htmlContent)
-};
 
 i = i + 1;
-localStorage.setItem("numbers",i);
+localStorage.setItem('numbers',i);
+};
 });
 
