@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     GamePost.hidden = false;
 };
 
-let i = localStorage.getItem("numbers");
+let i = parseInt(localStorage.getItem("numbers")) || 1;
 window.FormEntered = function() {
   var name = document.getElementById("name");
   var creator = document.getElementById("creator");
