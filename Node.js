@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let num = 1;
   while (true){
     if (localStorage.getItem("key${num}") !== null){
-      element.insertAdjacentHTML("afterend", localStorage.getItem("key${num}");
+      element.insertAdjacentHTML("afterend", localStorage.getItem("key${num}"));
 }
     else{
       break;
