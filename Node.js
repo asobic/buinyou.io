@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+  let num = 1;
+  while (true){
+    
   const Home = document.getElementById('Home');
   const Tutorial = document.getElementById("Tutorial");
   const Data = document.getElementById("Data");
@@ -38,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
     Data.hidden = true;
     GamePost.hidden = false;
 };
-v
-let i = localstorage.getItem("numbers")
+
+let i = localstorage.getItem("numbers");
 window.FormEntered = function() {
   var name = document.getElementById("name");
   var creator = document.getElementById("creator");
@@ -65,7 +68,7 @@ element.insertAdjacentHTML("afterend", htmlContent);
 localStorage.setItem("key${i}",htmlContent)
 };
 
-i = i + 1
-localstorage.setItem("numbers",i)
+i = i + 1;
+localstorage.setItem("numbers",i);
 });
 
