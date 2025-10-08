@@ -44,10 +44,21 @@ window.FormEntered = function() {
   var gameDiscription = document.getElementById("gameDiscription");
   var gameURL = document.getElementById("gameURL");
   const element = document.getElementById("basic");
-  storage.store = element.insertAdjacentHTML(
-    "afterend",
-    `<p>作品名：${name ? name.value : ""}<br>制作者名：${creator ? creator.value : ""}<br>ロゴ画像：<br>作品URL：${gameURL ? gameURL.value : ""}</p>`
-  );
+  const workName = name?.value ?? "";
+const creatorName = creator?.value ?? "";
+const logoImage = ""; // 必要に応じて画像タグなどを追加
+const gameLink = gameURL?.value ?? "";
+
+const htmlContent = `
+  <p>
+    作品名：${workName}<br>
+    制作者名：${creatorName}<br>
+    ロゴ画像：${logoImage}<br>
+    作品URL：${gameLink}
+  </p>
+`;
+
+storage.store = element.insertAdjacentHTML("afterend", htmlContent);
 };
 });
 
