@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     GamePost.hidden = false;
 };
 v
-let i = 1
+let i = localstorage.getItem("numbers")
 window.FormEntered = function() {
   var name = document.getElementById("name");
   var creator = document.getElementById("creator");
@@ -66,6 +66,6 @@ localStorage.setItem("key${i}",htmlContent)
 };
 
 i = i + 1
-localStorage.clear();
+localstorage.setItem("numbers",i)
 });
 
