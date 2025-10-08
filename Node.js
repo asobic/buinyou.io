@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   while (true){
     if (localStorage.getItem("key${num}") !== null){
       element.insertAdjacentHTML("afterend", localStorage.getItem("key${num}"));
+      num = num + 1;
 }
     else{
       break;
