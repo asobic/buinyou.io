@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
   const Tutorial = document.getElementById("Tutorial");
   const Data = document.getElementById("Data");
   const GamePost = document.getElementById("GamePost");
+  const UsefulURL = document.getElementById("usefulURL")
 
   window.onload =function(){
     Home.hidden = false;
     Tutorial.hidden = true;
     Data.hidden = true;
     GamePost.hidden = true;
+    UsefulURL.hidden = true;
   };
   
   window.ToHome = function(){
@@ -16,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     Tutorial.hidden = true;
     Data.hidden = true;
     GamePost.hidden = true;
+    UsefulURL.hidden = true;
   };
   
   window.ToTutorial = function(){
@@ -23,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     Tutorial.hidden = false;
     Data.hidden = true;
     GamePost.hidden = true;
+    UsefulURL.hidden = true;
   };
   
   window.ToData = function(){
@@ -30,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     Tutorial.hidden = true;
     Data.hidden = false;
     GamePost.hidden = true;
+    UsefulURL.hidden = true;
   };
 
   window.ToElse = function(){
@@ -37,7 +42,16 @@ document.addEventListener("DOMContentLoaded", function() {
     Tutorial.hidden = true;
     Data.hidden = true;
     GamePost.hidden = false;
+    UsefulURL.hidden = true;
 };
+
+  window.ToUsefulURL = function(){
+    Home.hidden = true;
+    Tutorial.hidden = true;
+    Data.hidden = true;
+    GamePost.hidden = true;
+    UsefulURL.hidden = false;
+    
 
 let i = parseInt(localStorage.getItem("numbers")) || 1;
 window.FormEntered = function() {
