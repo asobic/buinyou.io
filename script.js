@@ -37,51 +37,58 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   window.FormEntered = function () {
-    const name = document.getElementById("name");
-    const creator = document.getElementById("creator");
-    const gameDiscription = document.getElementById("gameDiscription");
-    const gameURL = document.getElementById("gameURL");
-    const logoInput = document.querySelector('input[type="file"]');
+  const name = document.getElementById("name");
+  const creator = document.getElementById("creator");
+  const gameDiscription = document.getElementById("gameDiscription");
+  const gameURL = document.getElementById("gameURL");
+  const logoInput = document.querySelector('input[type="file"]');
 
-    const workName = name?.value ?? "";
-    const creatorName = creator?.value ?? "";
-    const gameLink = gameURL?.value ?? "";
-    const logoImage =
-      logoInput?.files[0] ? URL.createObjectURL(logoInput.files[0]) : "";
+  const workName = name?.value ?? "";
+  const creatorName = creator?.value ?? "";
+  const gameLink = gameURL?.value ?? "";
+  const logoImage =
+    logoInput?.files[0] ? URL.createObjectURL(logoInput.files[0]) : "";
 
-    if (!workName || !creatorName || !gameLink) {
-      alert("すべての項目を入力してください");
-      return;
+  if (!workName || !creatorName || !gameLink) {
+    alert("すべての項目を入力してください");
+    return;
+  }
+
+  const htmlContent = `
+    <p>
+      作品名：${workName}<br>
+      制作者名：${creatorName}<br>
+      ロゴ画像：<br><img src="${logoImage}" width="150"><br>
+      作品URL：<a href="${gameLink}" target="_blank">${gameLink}</a><br>
+      説明：${gameDiscription?.value ?? ""}
+    </p>
+  `;
+
+  const postWrapper = document.createElement("div");
+  postWrapper.innerHTML = htmlContent;
+
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "削除";
+  deleteButton.onclick = () => {
+    const index = savedPosts.indexOf(htmlContent);
+    if (index !== -1) {
+      savedPosts.splice(index, 1);
+      localStorage.setItem("gamePosts", JSON.stringify(savedPosts));
     }
-
-    const htmlContent = `
-      <p>
-        作品名：${workName}<br>
-        制作者名：${creatorName}<br>
-        ロゴ画像：<br><img src="${logoImage}" width="150"><br>
-        作品URL：<a href="${gameLink}" target="_blank">${gameLink}</a><br>
-        説明：${gameDiscription?.value ?? ""}
-      </p>
-    `;
-
-    const postWrapper = document.createElement("div");
-    postWrapper.innerHTML = htmlContent;
-
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "削除";
-    deleteButton.onclick = () => {
-      const index = savedPosts.indexOf(htmlContent);
-      if (index !== -1) {
-        savedPosts.splice(index, 1);
-        localStorage.setItem("gamePosts", JSON.stringify(savedPosts));
-      }
-      postWrapper.remove();
-    };
-
-    postWrapper.appendChild(deleteButton);
-    element.insertAdjacentElement("afterend", postWrapper);
-
-    savedPosts.push(htmlContent);
-    localStorage.setItem("gamePosts", JSON.stringify(savedPosts));
+    postWrapper.remove();
   };
+
+  postWrapper.appendChild(deleteButton);
+  element.insertAdjacentElement("afterend", postWrapper);
+
+  savedPosts.push(htmlContent);
+  localStorage.setItem("gamePosts", JSON.stringify(savedPosts));
+
+  // ✅ 入力欄を空にする処理
+  name.value = "";
+  creator.value = "";
+  gameDiscription.value = "";
+  gameURL.value = "";
+  logoInput.value = "";
+};
 });
