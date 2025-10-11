@@ -48,7 +48,7 @@ footer{
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  paading: 5px;
+  padding: 5px;
 }
 
 .menu-icon span {
