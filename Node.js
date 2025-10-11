@@ -61,11 +61,16 @@ window.FormEntered = function() {
   var gameURL = document.getElementById("gameURL");
   const element = document.getElementById("basic");
   const workName = name?.value ?? "";
-const creatorName = creator?.value ?? "";
-const logoImage = ""; // 必要に応じて画像タグなどを追加
-const gameLink = gameURL?.value ?? "";
+  const creatorName = creator?.value ?? "";
+  const logoImage = ""; // 必要に応じて画像タグなどを追加
+  const gameLink = gameURL?.value ?? "";
+  if (!workName || !creatorName || !gameLink) {
+  alert("すべての項目を入力してください");
+  return;
+}
 
-const htmlContent = `
+
+  const htmlContent = `
   <p>
     作品名：${workName}<br>
     制作者名：${creatorName}<br>
@@ -74,7 +79,7 @@ const htmlContent = `
   </p>
 `;
 
-element.insertAdjacentHTML("afterend", htmlContent);
+element.insertAdjacentHTML("afterend","htmlContent);
 };
 });
 
