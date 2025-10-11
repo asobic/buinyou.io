@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const Home = document.getElementById('Home');
+document.addEventListener("DOMContentLoaded", function () {
+  const Home = document.getElementById("Home");
   const Tutorial = document.getElementById("Tutorial");
   const Data = document.getElementById("Data");
   const GamePost = document.getElementById("GamePost");
@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function showSection(sectionId) {
     const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
-    sections.forEach(sec => sec.hidden = sec.id !== sectionId);
+    sections.forEach((sec) => (sec.hidden = sec.id !== sectionId));
   }
 
-  window.ToHome = () => showSection('Home');
-  window.ToTutorial = () => showSection('Tutorial');
-  window.ToData = () => showSection('Data');
-  window.ToElse = () => showSection('GamePost');
-  window.ToUsefulURL = () => showSection('usefulURL');
+  window.ToHome = () => showSection("Home");
+  window.ToTutorial = () => showSection("Tutorial");
+  window.ToData = () => showSection("Data");
+  window.ToElse = () => showSection("GamePost");
+  window.ToUsefulURL = () => showSection("usefulURL");
 
   const element = document.getElementById("basic");
   const savedPosts = JSON.parse(localStorage.getItem("gamePosts")) || [];
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     element.insertAdjacentElement("afterend", postWrapper);
   });
 
-  window.FormEntered = function() {
+  window.FormEntered = function () {
     const name = document.getElementById("name");
     const creator = document.getElementById("creator");
     const gameDiscription = document.getElementById("gameDiscription");
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const workName = name?.value ?? "";
     const creatorName = creator?.value ?? "";
-    const logoImage = ""; // 必要に応じて画像タグなどを追加
     const gameLink = gameURL?.value ?? "";
-    const logoImage = logoInput?.files[0] ? URL.createObjectURL(logoInput.files[0]) : "";
+    const logoImage =
+      logoInput?.files[0] ? URL.createObjectURL(logoInput.files[0]) : "";
 
     if (!workName || !creatorName || !gameLink) {
       alert("すべての項目を入力してください");
@@ -58,8 +58,9 @@ document.addEventListener("DOMContentLoaded", function() {
       <p>
         作品名：${workName}<br>
         制作者名：${creatorName}<br>
-        ロゴ画像：${logoImage}<br>
-        作品URL：${gameLink}
+        ロゴ画像：<br><img src="${logoImage}" width="150"><br>
+        作品URL：<a href="${gameLink}" target="_blank">${gameLink}</a><br>
+        説明：${gameDiscription?.value ?? ""}
       </p>
     `;
 
