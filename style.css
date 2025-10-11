@@ -1,20 +1,9 @@
 body{
-    /*background: transparent;
-    background-image: initial;
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: transparent;*/
+
       background: radial-gradient(at 20% 70%, #83cde7, transparent), radial-gradient(at 50% 30%, #f480d5, transparent), radial-gradient(at 80% 80%, #b7f179, transparent);
-  /*background-attachment: fixed;
-  border: 0;
-  color: white;
-  overflow: auto */
+ 
   background-size: cover;
+  font-family: sans-serif;
 }
 .heading{
   display: flex;
@@ -43,9 +32,7 @@ button{
   text-align: right;
 }
 
-a{
-    color: blue;
-}
+
 
 footer{
     background-color: navy;
@@ -53,4 +40,34 @@ footer{
     padding-right: 24px;
     padding-left: 24px;
     color: white;
+}
+.menu-icon {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  paading: 5px;
+}
+
+.menu-icon span {
+  display: block;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+  color: white;
+}
+
+.menutab{
+  display: none;
+  background: white;
+  max-width: 30vw;
+}
+
+.menutab a{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+   padding: 10px;
 }
