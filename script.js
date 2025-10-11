@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const logoImage =
     logoInput?.files[0] ? URL.createObjectURL(logoInput.files[0]) : "";
 
-  if (!workName || !creatorName || !gameLink) {
+  if (!workName || !creatorName || !gameLink || !logoFile) {
     alert("すべての項目を入力してください");
     return;
   }
