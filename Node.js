@@ -5,28 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const GamePost = document.getElementById("GamePost");
   const UsefulURL = document.getElementById("usefulURL");
 
-function showSection(sectionId) {
-  const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
-  sections.forEach(sec => sec.hidden = sec.id !== sectionId);
-}
-  function showSection(sectionId) {
-  const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
-  sections.forEach(sec => sec.hidden = sec.id !== sectionId);
-}
-
-window.ToHome = () => showSection('Home');
-window.ToTutorial = () => showSection('Tutorial');
-window.ToData = () => showSection('Data');
-window.ToElse = () => showSection('GamePost');
-window.ToUsefulURL = () => showSection('usefulURL');
-
-document.addEventListener("DOMContentLoaded", function() {
-  const Home = document.getElementById('Home');
-  const Tutorial = document.getElementById("Tutorial");
-  const Data = document.getElementById("Data");
-  const GamePost = document.getElementById("GamePost");
-  const UsefulURL = document.getElementById("usefulURL");
-
   function showSection(sectionId) {
     const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
     sections.forEach(sec => sec.hidden = sec.id !== sectionId);
@@ -38,14 +16,31 @@ document.addEventListener("DOMContentLoaded", function() {
   window.ToElse = () => showSection('GamePost');
   window.ToUsefulURL = () => showSection('usefulURL');
 
-  let i = parseInt(localStorage.getItem("numbers")) || 1;
+  const element = document.getElementById("basic");
+  const savedPosts = JSON.parse(localStorage.getItem("gamePosts")) || [];
+
+  // 投稿の表示と削除ボタンの追加
+  savedPosts.forEach((post, index) => {
+    const postWrapper = document.createElement("div");
+    postWrapper.innerHTML = post;
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "削除";
+    deleteButton.onclick = () => {
+      savedPosts.splice(index, 1);
+      localStorage.setItem("gamePosts", JSON.stringify(savedPosts));
+      postWrapper.remove();
+    };
+
+    postWrapper.appendChild(deleteButton);
+    element.insertAdjacentElement("afterend", postWrapper);
+  });
 
   window.FormEntered = function() {
-    var name = document.getElementById("name");
-    var creator = document.getElementById("creator");
-    var gameDiscription = document.getElementById("gameDiscription");
-    var gameURL = document.getElementById("gameURL");
-    const element = document.getElementById("basic");
+    const name = document.getElementById("name");
+    const creator = document.getElementById("creator");
+    const gameDiscription = document.getElementById("gameDiscription");
+    const gameURL = document.getElementById("gameURL");
 
     const workName = name?.value ?? "";
     const creatorName = creator?.value ?? "";
@@ -66,7 +61,24 @@ document.addEventListener("DOMContentLoaded", function() {
       </p>
     `;
 
-    element.insertAdjacentHTML("afterend", htmlContent);
+    const postWrapper = document.createElement("div");
+    postWrapper.innerHTML = htmlContent;
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "削除";
+    deleteButton.onclick = () => {
+      const index = savedPosts.indexOf(htmlContent);
+      if (index !== -1) {
+        savedPosts.splice(index, 1);
+        localStorage.setItem("gamePosts", JSON.stringify(savedPosts));
+      }
+      postWrapper.remove();
+    };
+
+    postWrapper.appendChild(deleteButton);
+    element.insertAdjacentElement("afterend", postWrapper);
+
+    savedPosts.push(htmlContent);
+    localStorage.setItem("gamePosts", JSON.stringify(savedPosts));
   };
 });
-
