@@ -89,6 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
   creator.value = "";
   gameDiscription.value = "";
   gameURL.value = "";
-  logoInput.value = "";
+  logoInput.value = null; // ← これが重要！
 };
 });
