@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const Data = document.getElementById("Data");
   const GamePost = document.getElementById("GamePost");
   const UsefulURL = document.getElementById("usefulURL");
-
+const Menutab = document.getElementById('menutab');
+const Menuicon = document.getElementById('menuicon');
   function showSection(sectionId) {
     const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
     sections.forEach((sec) => (sec.hidden = sec.id !== sectionId));
@@ -91,4 +92,11 @@ document.addEventListener("DOMContentLoaded", function () {
   gameURL.value = "";
   logoInput.value = null; // ← これが重要！
 };
+
+Menuicon.addEventListener('click', function() {
+  if (Menutab.style.display === 'block') {
+    Menutab.style.display = 'none';
+  } else {
+    Menutab.style.display = 'block';
+  }
 });
