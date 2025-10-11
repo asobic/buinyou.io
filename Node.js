@@ -5,53 +5,20 @@ document.addEventListener("DOMContentLoaded", function() {
   const GamePost = document.getElementById("GamePost");
   const UsefulURL = document.getElementById("usefulURL");
 
-  window.onload =function(){
-    Home.hidden = false;
-    Tutorial.hidden = true;
-    Data.hidden = true;
-    GamePost.hidden = true;
-    UsefulURL.hidden = true;
-  };
-  
-  window.ToHome = function(){
-    Home.hidden = false;
-    Tutorial.hidden = true;
-    Data.hidden = true;
-    GamePost.hidden = true;
-    UsefulURL.hidden = true;
-  };
-  
-  window.ToTutorial = function(){
-    Home.hidden = true;
-    Tutorial.hidden = false;
-    Data.hidden = true;
-    GamePost.hidden = true;
-    UsefulURL.hidden = true;
-  };
-  
-  window.ToData = function(){
-    Home.hidden = true;
-    Tutorial.hidden = true;
-    Data.hidden = false;
-    GamePost.hidden = true;
-    UsefulURL.hidden = true;
-  };
+function showSection(sectionId) {
+  const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
+  sections.forEach(sec => sec.hidden = sec.id !== sectionId);
+}
+  function showSection(sectionId) {
+  const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
+  sections.forEach(sec => sec.hidden = sec.id !== sectionId);
+}
 
-  window.ToElse = function(){
-    Home.hidden = true;
-    Tutorial.hidden = true;
-    Data.hidden = true;
-    GamePost.hidden = false;
-    UsefulURL.hidden = true;
-};
-
-  window.ToUsefulURL = function(){
-    Home.hidden = true;
-    Tutorial.hidden = true;
-    Data.hidden = true;
-    GamePost.hidden = true;
-    UsefulURL.hidden = false;
-    
+window.ToHome = () => showSection('Home');
+window.ToTutorial = () => showSection('Tutorial');
+window.ToData = () => showSection('Data');
+window.ToElse = () => showSection('GamePost');
+window.ToUsefulURL = () => showSection('usefulURL');
 
 let i = parseInt(localStorage.getItem("numbers")) || 1;
 window.FormEntered = function() {
