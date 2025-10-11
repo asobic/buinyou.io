@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const Tutorial = document.getElementById("Tutorial");
   const Data = document.getElementById("Data");
   const GamePost = document.getElementById("GamePost");
-  const UsefulURL = document.getElementById("usefulURL")
+  const UsefulURL = document.getElementById("usefulURL");
 
   window.onload =function(){
     Home.hidden = false;
