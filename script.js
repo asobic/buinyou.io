@@ -41,11 +41,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const creator = document.getElementById("creator");
     const gameDiscription = document.getElementById("gameDiscription");
     const gameURL = document.getElementById("gameURL");
+    const logoInput = document.querySelector('input[type="file"]');
 
     const workName = name?.value ?? "";
     const creatorName = creator?.value ?? "";
     const logoImage = ""; // 必要に応じて画像タグなどを追加
     const gameLink = gameURL?.value ?? "";
+    const logoImage = logoInput?.files[0] ? URL.createObjectURL(logoInput.files[0]) : "";
 
     if (!workName || !creatorName || !gameLink) {
       alert("すべての項目を入力してください");
