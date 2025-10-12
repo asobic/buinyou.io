@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const Menutab = document.getElementById("menutab");
     const Menuicon = document.getElementById("menuicon");
     const element = document.getElementById("basic");
+    function openmenu() {
+      if (Menutab.style.display === "block") {
+      Menutab.style.display = "none";
+      } else {
+          Menutab.style.display = "block";
+             }
+    }
 
     function showSection(sectionId) {
       const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
