@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function openmenu() {
       if (Menutab.style.display === "block") {
       Menutab.style.display = "none";
-      } else {
+      } 
+      else {
           Menutab.style.display = "block";
              }
     }
