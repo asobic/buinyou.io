@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.ToElse = () => showSection("GamePost");
     window.ToUsefulURL = () => showSection("usefulURL");
 
-    /*// 投稿一覧を取得して表示
+    /* 投稿一覧を取得して表示
     const posts = await fetchPosts();
     posts.forEach((post) => displayPost(post));
 
-    // 投稿処理
+     投稿処理
     window.FormEntered = async function () {
       const name = document.getElementById("name");
       const creator = document.getElementById("creator");
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
           logoImage
         });
 
-        // 入力欄リセット
+        入力欄リセット
         name.value = "";
         creator.value = "";
         gameURL.value = "";
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    //投稿表示関数
+    投稿表示関数
     function displayPost(post) {
       const postWrapper = document.createElement("div");
       postWrapper.innerHTML = `
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
       element.insertAdjacentElement("afterend", postWrapper);
     }
 
-    // 投稿取得関数
+     投稿取得関数
     async function fetchPosts() {
       try {
         const response = await fetch(SCRIPT_URL, {
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // 投稿削除関数
+     投稿削除関数
     async function deletePost(id) {
       try {
         await fetch(SCRIPT_URL, {
