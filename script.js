@@ -96,7 +96,9 @@ const Menuicon = document.getElementById('menuicon');
 Menuicon.addEventListener('click', function() {
   if (Menutab.style.display === 'block') {
     Menutab.style.display = 'none';
+    alert("こんにちは！");
   } else {
     Menutab.style.display = 'block';
+    alert("こんにちは");
   }
 });
