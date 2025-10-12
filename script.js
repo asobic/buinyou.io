@@ -1,4 +1,4 @@
-const SCRIPT_URL = "https://script.google.com/macros/library/d/1abucuGGHEfNmY7N3VwtO7KF9ovQhg0rqaf2RRNPio4tLC6jXtMfmbY_o/1";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysxGiZhYHIAqm7RBduXa2CIreus4BBwV1J0poPLVNGY4dsPmKVcGXAIBT6919AWDknnw/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
   (async function () {
