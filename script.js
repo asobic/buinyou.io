@@ -1,4 +1,4 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysxGiZhYHIAqm7RBduXa2CIreus4BBwV1J0poPLVNGY4dsPmKVcGXAIBT6919AWDknnw/exec";
+//const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysxGiZhYHIAqm7RBduXa2CIreus4BBwV1J0poPLVNGY4dsPmKVcGXAIBT6919AWDknnw/exec";
 
 document.addEventListener("DOMContentLoaded", () => {
   (async function () {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.ToElse = () => showSection("GamePost");
     window.ToUsefulURL = () => showSection("usefulURL");
 
-    <!--// 投稿一覧を取得して表示
+    /*// 投稿一覧を取得して表示
     const posts = await fetchPosts();
     posts.forEach((post) => displayPost(post));
 
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    /* 投稿表示関数
+    //投稿表示関数
     function displayPost(post) {
       const postWrapper = document.createElement("div");
       postWrapper.innerHTML = `
