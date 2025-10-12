@@ -143,6 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } catch (error) {
         alert("削除に失敗しました：" + error);
       }
-    }
-  })();*/
+    }*/
+  })();
 });
