@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>
           作品名：${post.name}<br>
           制作者名：${post.creator}<br>
-          ロゴ画像：<br><img src="${post.logoImage ?? ''}" width="150"><br>
+          ロゴ画像：<br>
+          ${post.logoImage ? `<img src="${post.logoImage}" width="150">` : '<span>（画像は表示されません）</span>'}<br>
           作品URL：<a href="${post.url}" target="_blank">${post.url}</a><br>
           説明：${post.description}<br>
           投稿日時：${post.date}
