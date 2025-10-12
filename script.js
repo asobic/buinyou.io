@@ -93,7 +93,7 @@ const Menuicon = document.getElementById('menuicon');
   logoInput.value = null; // ← これが重要！
 };
 
-Menuicon.addEventListener('click', function() {
+function openmenu() {
   if (Menutab.style.display === 'block') {
     Menutab.style.display = 'none';
     alert("こんにちは！");
@@ -101,4 +101,6 @@ Menuicon.addEventListener('click', function() {
     Menutab.style.display = 'block';
     alert("こんにちは");
   }
+}
+
 });
