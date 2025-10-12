@@ -49,6 +49,7 @@ footer{
   justify-content: space-between;
   cursor: pointer;
   padding: 5px;
+  z-index: 1001;
 }
 
 .menu-icon span {
