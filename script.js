@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
       sections.forEach((sec) => (sec.hidden = sec.id !== sectionId));
     }
 
+    showSection("Home");
+    
     window.ToHome = () => showSection("Home");
     window.ToTutorial = () => showSection("Tutorial");
     window.ToData = () => showSection("Data");
