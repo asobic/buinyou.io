@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     Menutab.style.display = 'block';
   }
-}
+});
 
     function showSection(sectionId) {
       const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
