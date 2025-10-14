@@ -27,7 +27,7 @@ function showSection(sectionId) {
   window.ToHome = () => showSection("Home");
   window.ToTutorial = () => showSection("Tutorial");
   window.ToData = () => showSection("Data");
-  window.ToElse = () => showSection("GamePost");
+  window.ToGamePost = () => showSection("GamePost");
   window.ToUsefulURL = () => showSection("usefulURL");
 
 // メニューアイコンのクリックイベント
