@@ -40,8 +40,6 @@ window.batsu = () => {
   Menutab.style.display = 'none';
 };
 
-  showSection("Home");
-
 
     /* 投稿一覧を取得して表示
     const posts = await fetchPosts();
@@ -158,4 +156,3 @@ window.batsu = () => {
         alert("削除に失敗しました：" + error);
       }
     }*/
-  })();
