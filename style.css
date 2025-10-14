@@ -41,6 +41,61 @@ footer{
     padding-left: 24px;
     color: white;
 }
+  .menu-icon {
+  width: 60px;
+  height: 44px;
+  padding: 10px;
+}
+
+.menu-icon span {
+  display: block;
+  height: 8px;
+  background-color: #333;
+  border-radius: 4px;
+  color: white;
+}
+
+
+.menutab{
+  display: none;
+  position: fixed;         /*ページ全体に固定 */
+  top: 0;
+  left: 0;
+  width: 500vw;        
+  height: 500vh;          
+  background: white;
+  z-index: 1000;           /* 他の要素より前に出す */
+  overflow-y: auto;        /* 内容が多いときスクロールできるように */
+}
+
+.menutab a{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 20px;
+  margin: 5vw;
+  cursor: pointer;
+  font-size: clamp(16px, 5vw, 28px); 
+}
+
+.yokonarabiheader {
+  display: flex;
+  justify-content: space-between;  
+  align-items: top; 
+  width: 100%;
+}
+header img{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  max-width: 70vw;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .Buttons {
+    display: none;
+  }
 .menu-icon {
   width: 30px;
   height: 22px;
@@ -49,7 +104,7 @@ footer{
   justify-content: space-between;
   cursor: pointer;
   padding: 5px;
-  z-index: 1001;
+
 }
 
 .menu-icon span {
@@ -58,17 +113,9 @@ footer{
   background-color: #333;
   border-radius: 2px;
   color: white;
+                }
 }
-
-.menutab{
-  display: none;
-  background: white;
-  max-width: 30vw;
-}
-
-.menutab a{
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-   padding: 10px;
+.batsu{
+  text-align: right;
+  margin-right: 10vw;
 }
