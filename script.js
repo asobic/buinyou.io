@@ -1,27 +1,42 @@
 //const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysxGiZhYHIAqm7RBduXa2CIreus4BBwV1J0poPLVNGY4dsPmKVcGXAIBT6919AWDknnw/exec";
 
-(async function () {
-  const Home = document.getElementById("Home");
-  const Tutorial = document.getElementById("Tutorial");
-  const Data = document.getElementById("Data");
-  const GamePost = document.getElementById("GamePost");
-  const UsefulURL = document.getElementById("usefulURL");
-  const Menutab = document.getElementById("menutab");
-  const Menuicon = document.getElementById("menuicon");
-  const element = document.getElementById("basic");
- Menuicon.addEventListener('click', function() {
-  if (Menutab.style.display === 'block') {
-    Menutab.style.display = 'none';
-  } else {
-    Menutab.style.display = 'block';
+const sections = {
+  Home: document.getElementById('Home'),
+  Tutorial: document.getElementById('Tutorial'),
+  Data: document.getElementById('Data'),
+  GamePost: document.getElementById('GamePost'),
+  UsefulURL: document.getElementById('usefulURL')
+};
+
+const Menutab = document.getElementById('menutab');
+const Menuicon = document.getElementById('menuicon');
+
+// 初期表示設定
+window.onload = () => showSection('Home');
+
+// セクション表示切り替え関数
+function showSection(sectionId) {
+  for (const id in sections) {
+    sections[id].hidden = id !== sectionId;
   }
+  Menutab.style.display = 'none';
+}
+
+// 各セクションへのナビゲーション関数
+window.ToHome = () => showSection('Home');
+window.ToDayOfSSCC = () => showSection('The_Day_Of_SSCC');
+window.ToRoomOfMembers = () => showSection('Page_For_Members');
+window.ToActivity = () => showSection('Activity');
+
+// メニューアイコンのクリックイベント
+Menuicon.addEventListener('click', () => {
+  Menutab.style.display = Menutab.style.display === 'block' ? 'none' : 'block';
 });
 
-  function showSection(sectionId) {
-    const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
-    sections.forEach((sec) => (sec.hidden = sec.id !== sectionId));
-    Menuicon.style.display = 'none';
-    }
+// メニューを閉じる関数
+window.batsu = () => {
+  Menutab.style.display = 'none';
+};
 
   showSection("Home");
     
