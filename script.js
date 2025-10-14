@@ -1,16 +1,15 @@
 //const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysxGiZhYHIAqm7RBduXa2CIreus4BBwV1J0poPLVNGY4dsPmKVcGXAIBT6919AWDknnw/exec";
 
-document.addEventListener("DOMContentLoaded", () => {
-  (async function () {
-    const Home = document.getElementById("Home");
-    const Tutorial = document.getElementById("Tutorial");
-    const Data = document.getElementById("Data");
-    const GamePost = document.getElementById("GamePost");
-    const UsefulURL = document.getElementById("usefulURL");
-    const Menutab = document.getElementById("menutab");
-    const Menuicon = document.getElementById("menuicon");
-    const element = document.getElementById("basic");
-   Menuicon.addEventListener('click', function() {
+(async function () {
+  const Home = document.getElementById("Home");
+  const Tutorial = document.getElementById("Tutorial");
+  const Data = document.getElementById("Data");
+  const GamePost = document.getElementById("GamePost");
+  const UsefulURL = document.getElementById("usefulURL");
+  const Menutab = document.getElementById("menutab");
+  const Menuicon = document.getElementById("menuicon");
+  const element = document.getElementById("basic");
+ Menuicon.addEventListener('click', function() {
   if (Menutab.style.display === 'block') {
     Menutab.style.display = 'none';
   } else {
@@ -18,18 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-    function showSection(sectionId) {
-      const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
-      sections.forEach((sec) => (sec.hidden = sec.id !== sectionId));
+  function showSection(sectionId) {
+    const sections = [Home, Tutorial, Data, GamePost, UsefulURL];
+    sections.forEach((sec) => (sec.hidden = sec.id !== sectionId));
+    Menuicon.style.display = 'none';
     }
 
-    showSection("Home");
+  showSection("Home");
     
-    window.ToHome = () => showSection("Home");
-    window.ToTutorial = () => showSection("Tutorial");
-    window.ToData = () => showSection("Data");
-    window.ToElse = () => showSection("GamePost");
-    window.ToUsefulURL = () => showSection("usefulURL");
+  window.ToHome = () => showSection("Home");
+  window.ToTutorial = () => showSection("Tutorial");
+  window.ToData = () => showSection("Data");
+  window.ToElse = () => showSection("GamePost");
+  window.ToUsefulURL = () => showSection("usefulURL");
 
     /* 投稿一覧を取得して表示
     const posts = await fetchPosts();
@@ -147,4 +147,3 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }*/
   })();
-});
