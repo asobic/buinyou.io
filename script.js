@@ -28,7 +28,7 @@ function showSection(sectionId) {
   window.ToTutorial = () => showSection("Tutorial");
   window.ToData = () => showSection("Data");
   window.ToGamePost = () => showSection("GamePost");
-  window.ToUsefulURL = () => showSection("usefulURL");
+  window.ToUsefulURL = () => showSection("UsefulURL");
 
 // メニューアイコンのクリックイベント
 Menuicon.addEventListener('click', () => {
