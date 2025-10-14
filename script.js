@@ -23,10 +23,12 @@ function showSection(sectionId) {
 }
 
 // 各セクションへのナビゲーション関数
-window.ToHome = () => showSection('Home');
-window.ToDayOfSSCC = () => showSection('The_Day_Of_SSCC');
-window.ToRoomOfMembers = () => showSection('Page_For_Members');
-window.ToActivity = () => showSection('Activity');
+    
+  window.ToHome = () => showSection("Home");
+  window.ToTutorial = () => showSection("Tutorial");
+  window.ToData = () => showSection("Data");
+  window.ToElse = () => showSection("GamePost");
+  window.ToUsefulURL = () => showSection("usefulURL");
 
 // メニューアイコンのクリックイベント
 Menuicon.addEventListener('click', () => {
@@ -39,12 +41,7 @@ window.batsu = () => {
 };
 
   showSection("Home");
-    
-  window.ToHome = () => showSection("Home");
-  window.ToTutorial = () => showSection("Tutorial");
-  window.ToData = () => showSection("Data");
-  window.ToElse = () => showSection("GamePost");
-  window.ToUsefulURL = () => showSection("usefulURL");
+
 
     /* 投稿一覧を取得して表示
     const posts = await fetchPosts();
