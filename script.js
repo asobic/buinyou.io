@@ -9,26 +9,35 @@ const sections = {
 const Menutab = document.getElementById('menutab');
 const Menuicon = document.getElementById('menuicon');
 
-// DOM読み込み後に初期表示
+// 初期表示（ページ読み込み時）
 document.addEventListener('DOMContentLoaded', () => {
   showSection('Home');
 });
 
-// セクション表示切り替え
+// セクション表示切り替え関数
 function showSection(sectionId) {
   Object.keys(sections).forEach(id => {
     const sectionEl = document.getElementById(id);
     const tabEl = document.querySelector(`.${sections[id]}`);
 
+    // セクションの表示・非表示
     if (sectionEl) {
       sectionEl.hidden = id !== sectionId;
     }
 
+    // タブの色変更
     if (tabEl) {
-      tabEl.style.color = id === sectionId ? 'red' : 'black';
+      if (id === sectionId) {
+        tabEl.style.color = 'red';      // 選択中のタブを赤に
+        tabEl.style.fontWeight = 'bold'; // 見やすく
+      } else {
+        tabEl.style.color = 'black';     // その他のタブを黒に
+        tabEl.style.fontWeight = 'normal';
+      }
     }
   });
 
+  // メニューを自動で閉じる
   if (Menutab) Menutab.style.display = 'none';
 }
 
