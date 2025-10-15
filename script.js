@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function showSection(sectionId) {
   Object.keys(sections).forEach(id => {
     const sectionEl = document.getElementById(id);
-    const tabEl = document.querySelector(`.${sections[id]}`);
+    const tabEl = document.querySelector(`.class${sections[id]}`);
 
     // セクションの表示・非表示
     if (sectionEl) {
