@@ -3,7 +3,7 @@ const sections = {
   Tutorial: 'Tutorial',
   Data: 'Data',
   GamePost: 'GamePost',
-  UsefulURL: 'usefulURL'
+  UsefulURL: 'UsefulURL'
 };
 
 const Menutab = document.getElementById('menutab');
