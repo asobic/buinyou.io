@@ -1,34 +1,31 @@
 //const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbysxGiZhYHIAqm7RBduXa2CIreus4BBwV1J0poPLVNGY4dsPmKVcGXAIBT6919AWDknnw/exec";
 
 const sections = {
-  Home: document.getElementById('Home'),
-  Tutorial: document.getElementById('Tutorial'),
-  Data: document.getElementById('Data'),
-  GamePost: document.getElementById('GamePost'),
-  UsefulURL: document.getElementById('usefulURL')
+  Home: 'Home',
+  Tutorial: 'Tutorial',
+  Data: 'Data',
+  UsefulURL: 'usefulURL'
 };
 
 const Menutab = document.getElementById('menutab');
 const Menuicon = document.getElementById('menuicon');
 
-// 初期表示設定
+// 初期表示
 window.onload = () => showSection('Home');
 
-// セクション表示切り替え関数
+// セクション表示切り替え
 function showSection(sectionId) {
-  for (const id in sections) {
-    sections[id].hidden = id !== sectionId;
-  }
+  Object.keys(sections).forEach(id => {
+    document.getElementById(id).hidden = id !== sectionId;
+    document.querySelector(`.${sections[id]}`).style.color = id === sectionId ? 'red' : 'black';
+  });
   Menutab.style.display = 'none';
 }
 
-// 各セクションへのナビゲーション関数
-    
-  window.ToHome = () => showSection("Home");
-  window.ToTutorial = () => showSection("Tutorial");
-  window.ToData = () => showSection("Data");
-  window.ToGamePost = () => showSection("GamePost");
-  window.ToUsefulURL = () => showSection("UsefulURL");
+// ナビゲーション関数を自動生成
+Object.keys(sections).forEach(id => {
+  window[`To${id}`] = () => showSection(id);
+});
 
 // メニューアイコンのクリックイベント
 Menuicon.addEventListener('click', () => {
@@ -38,7 +35,7 @@ Menuicon.addEventListener('click', () => {
 // メニューを閉じる関数
 window.batsu = () => {
   Menutab.style.display = 'none';
-};
+}
 
 
     /* 投稿一覧を取得して表示
