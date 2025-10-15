@@ -1,163 +1,157 @@
 <!DOCTYPE html>
 <html lang="ja">
- <head>
- <meta charset="utf-8">
- <title>SSCC部員用ホームページ|令和最新版</title>
- <meta name="description" content="渋渋コンピュータ部の公式ホームページ">
- <meta name="keywords" content="渋渋,コンピュータ,コンピューター,sscc,コンピュータ部,渋谷教育学園渋谷中学,渋谷教育学園">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <title>SSCC部員用ホームページ|令和最新版</title>
+    <meta name="description" content="渋渋コンピュータ部の公式ホームページ">
+    <meta name="keywords" content="渋渋,コンピュータ,コンピューター,sscc,コンピュータ部,渋谷教育学園渋谷中学,渋谷教育学園">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <!--[if lt IE 9]>
- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
- <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
- <![endif]-->
- <link rel="stylesheet" href="style.css">
- </head>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="style.css">
+  </head>
  
- <body>
- <!----- ヘッダー ----->
- <header>
- <div class="yokonarabiheader">
+  <body>
+  <!----- ヘッダー ----->
+    <header>
+      <div class="yokonarabiheader">
+        <div>
+          <img src = "ssccbiglogo.avif" onclick ="ToHome()">
+        </div>
+        <div class="menus">
+          <div class="menu-icon" id ="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
 
-   <div>
-     <img src = "ssccbiglogo.avif" onclick ="ToHome()">
-   </div>
-   <div class="menus">
-     <div class="menu-icon" id ="menuicon">
-       <span></span>
-       <span></span>
-       <span></span>
-     </div>
-   </div>
- </div>
-
- <div class = Buttons>
-   <button type = "button" onclick = "ToHome()">Home</button>
-    <button type = "button" onclick = "ToTutorial()">チュートリアル</button>
-   <button type = "button" onclick = "ToData()">資料</button>
-   <button type = "button" onclick = "ToGamePost()">ゲーム投稿場所</button>
-   <button type = "button" onclick = "ToUsefulURL()">お役立ちリンク集</button>
-  </div>
- <hr>
- </header>
-
- <!----- ヘッダー END ----->
+      <div class = Buttons>
+        <button type = "button" onclick = "ToHome()">Home</button>
+        <button type = "button" onclick = "ToTutorial()">チュートリアル</button>
+        <button type = "button" onclick = "ToData()">資料</button>
+        <button type = "button" onclick = "ToGamePost()">ゲーム投稿場所</button>
+        <button type = "button" onclick = "ToUsefulURL()">お役立ちリンク集</button>
+      </div>
+      <hr>
+    </header>
+  <!----- ヘッダー END ----->
  
- <!----- メインコンテンツ ----->
-  <main>
-<div class = "menutab" id ="menutab">
-   <a class ="batsu" id = "batsu" onclick="batsu()"><b>×</b></a>
-  <a onclick = "ToHome()">ホーム</a>
-  <a onclick = "ToTutorial()">チュートリアル</a>
-  <a onclick = "ToData()">お役立ち資料</a>
-  <a onclick = "ToGamePost()">ゲーム投稿場所</a>
-  <a onclick = "ToUsefulURL()">お役立ちリンク集</a>
-</div>
+  <!----- メインコンテンツ ----->
+    <main>
+      <div class = "menutab" id ="menutab">
+        <a class ="batsu" id = "batsu" onclick="batsu()"><b>×</b></a>
+        <a onclick = "ToHome()">ホーム</a>
+        <a onclick = "ToTutorial()">チュートリアル</a>
+        <a onclick = "ToData()">お役立ち資料</a>
+        <a onclick = "ToGamePost()">ゲーム投稿場所</a>
+        <a onclick = "ToUsefulURL()">お役立ちリンク集</a>
+      </div>
 
-  <div id = "Home">
-   <article class = "Greeting">
-    <h4>Greetings</h4>
-    <p>こちらはSSCC(ShibuShibuComputerClub)の部員用ページです。OBやOGの方もご覧いただいて構いませんが、部員でない人は閲覧を遠慮していただくようよろしくお願いします。</p>
-   </article>
-   <article class = "About_Us">
-    <h4><br><br>About Us</h4>
-    <p>SSCCは渋谷教育学園渋谷中学高等学校のコンピューター部です。中高合わせて活動しており、部員は合計で50人以上にものぼります。週4日活動しており、部員の過半数が兼部をしています。</p>
-   </article>
-   <article class = "What_We_Do">
-    <h4><br><br>What We Do</h4>
-    <p>SSCCではコンピュータに関することならば何でも行ってよく、皆比較的自由に活動しています。ゲーム制作、3Dモデリングに限らず、WEBサイトの作成なども行っています。SSCCの最大のイベントである飛龍祭では、毎年部員が作ったゲームや動画を展示しています。</p>
-   </article>
-  </div>
+      <div id = "Home">
+        <article class = "Greeting">
+          <h4>Greetings</h4>
+          <p>こちらはSSCC(ShibuShibuComputerClub)の部員用ページです。OBやOGの方もご覧いただいて構いませんが、部員でない人は閲覧を遠慮していただくようよろしくお願いします。</p>
+        </article>
+        <article class = "About_Us">
+          <h4><br><br>About Us</h4>
+          <p>SSCCは渋谷教育学園渋谷中学高等学校のコンピューター部です。中高合わせて活動しており、部員は合計で50人以上にものぼります。週4日活動しており、部員の過半数が兼部をしています。</p>
+        </article>
+        <article class = "What_We_Do">
+          <h4><br><br>What We Do</h4>
+          <p>SSCCではコンピュータに関することならば何でも行ってよく、皆比較的自由に活動しています。ゲーム制作、3Dモデリングに限らず、WEBサイトの作成なども行っています。SSCCの最大のイベントである飛龍祭では、毎年部員が作ったゲームや動画を展示しています。</p>
+        </article>
+      </div>
 
-  <div id = "Tutorial">
-   <h3>チュートリアル</h3>
-   <article class = "overview">
-    <h4>はじめに</h4>
-    <p>このチュートリアルでは以下のソフトウェアを使用します。事前にダウンロードしておいてください。</p>
-     <ul>
-      <li>VisualStudioCode コードを書く時に役立つソフトウェアです。<br><button type = "button" onclick = "location.href = 'https://visualstudio.microsoft.com/ja/downloads/'">VScodeをダウンロード</button></li>
-      <li>Unity ゲーム制作に使用するツールです。</li>
-      <li>UnityHub Unityのバージョンなどを管理するためのツールです。</li>
-     </ul>
-   </article>
-   <hr>
-   <article>
-    <h4>C#入門講座</h4>
-    <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1BwbCZQp7daZAeWn1FyVBvIE0I7PVruTkU0WVM_Bk7YU/edit?tab=t.0'">Day1</button>
-    <p><br>C#の基本、変数・条件分岐・ループ処理など</p>
-    <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1ZbczfY9a4m-LJJdSJobTo2jrOXUm_kOzb_-ADvaID-4/edit?tab=t.0'">Day2</button>
-    <p><br>For文・メソッド、インスタンスの作り方 + じゃんけんゲームを作ろう</p> 
-    <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1L27TqkAlg1z0JveUaLVWf7QrSQwzF2tIPyXEiUM8HyA/edit?tab=t.0'">Day3</button>
-    <p><br>配列 + 神経衰弱ゲームを作ろう</p>
-    <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/13aYXGAXLXLSer-IRCS4zwXhRxy7G3-bW9MzxEqT_O00/edit?tab=t.0'">Day4</button>
-    <p><br>Windows Formについて、各機能の説明 + じゃんけんゲームをWindows Formで作ろう</p>
-    <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1vPIhgKgRRiJXvAUZ2dHy4tJpOhZAqSwhk8MKTSaHr3Q/edit?tab=t.0'">Day5</button>
-    <p><br>クラスやイベントの作成、移動、当たり判定の実装</p>
-    <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/13zwvfamt-J9nDGKc5_UJ6WpAyv1gXPKGYlJQUgmasSM/edit?tab=t.0'">Day6</button>
-   <p><br>2つのキャラクターの操作、仕上げ、まとめ</p> 
-   </article>
-   <hr>
-   <article>
-    <h4>C#で円周率を求める</h4>
-    <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1XqYmBHGeRNluXNI6r3SE4pzlZ3FbfO6WwdktJL2pc1Y/edit?usp=drivesdk'">円周率を求める</button>
-   </article>
-   <hr>
-   <article>
-    <h4>Unity2Dでブロック崩し</h4>
-   </article>
-   <hr>
-   <article>
-    <h4>Unity2DでMinesweeper</h4>
-   </article>
-   <hr>
-   <article>
-    <h4>Unity3Dで玉転がし</h4>
-   </article>
-   <hr>
-   <article>
-    <h4>JavaScript入門講座</h4>
-   </article>
-  </div>
+      <div id = "Tutorial">
+        <h3>チュートリアル</h3>
+          <article class = "overview">
+            <h4>はじめに</h4>
+            <p>このチュートリアルでは以下のソフトウェアを使用します。事前にダウンロードしておいてください。</p>
+            <ul>
+              <li>VisualStudioCode コードを書く時に役立つソフトウェアです。<br><button type = "button" onclick = "location.href = 'https://visualstudio.microsoft.com/ja/downloads/'">VScodeをダウンロード</button></li>
+              <li>Unity ゲーム制作に使用するツールです。</li>
+              <li>UnityHub Unityのバージョンなどを管理するためのツールです。</li>
+            </ul>
+          </article>
+          <hr>
+          <article>
+            <h4>C#入門講座</h4>
+            <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1BwbCZQp7daZAeWn1FyVBvIE0I7PVruTkU0WVM_Bk7YU/edit?tab=t.0'">Day1</button>
+            <p><br>C#の基本、変数・条件分岐・ループ処理など</p>
+            <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1ZbczfY9a4m-LJJdSJobTo2jrOXUm_kOzb_-ADvaID-4/edit?tab=t.0'">Day2</button>
+            <p><br>For文・メソッド、インスタンスの作り方 + じゃんけんゲームを作ろう</p> 
+            <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1L27TqkAlg1z0JveUaLVWf7QrSQwzF2tIPyXEiUM8HyA/edit?tab=t.0'">Day3</button>
+            <p><br>配列 + 神経衰弱ゲームを作ろう</p>
+            <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/13aYXGAXLXLSer-IRCS4zwXhRxy7G3-bW9MzxEqT_O00/edit?tab=t.0'">Day4</button>
+            <p><br>Windows Formについて、各機能の説明 + じゃんけんゲームをWindows Formで作ろう</p>
+            <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1vPIhgKgRRiJXvAUZ2dHy4tJpOhZAqSwhk8MKTSaHr3Q/edit?tab=t.0'">Day5</button>
+            <p><br>クラスやイベントの作成、移動、当たり判定の実装</p>
+            <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/13zwvfamt-J9nDGKc5_UJ6WpAyv1gXPKGYlJQUgmasSM/edit?tab=t.0'">Day6</button>
+            <p><br>2つのキャラクターの操作、仕上げ、まとめ</p> 
+          </article>
+          <hr>
+          <article>
+            <h4>C#で円周率を求める</h4>
+            <button type = "button" onclick = "location.href = 'https://docs.google.com/document/d/1XqYmBHGeRNluXNI6r3SE4pzlZ3FbfO6WwdktJL2pc1Y/edit?usp=drivesdk'">円周率を求める</button>
+          </article>
+          <hr>
+          <article>
+            <h4>Unity2Dでブロック崩し</h4>
+          </article>
+          <hr>
+          <article>
+            <h4>Unity2DでMinesweeper</h4>
+          </article>
+          <hr>
+          <article>
+            <h4>Unity3Dで玉転がし</h4>
+          </article>
+          <hr>
+          <article>
+            <h4>JavaScript入門講座</h4>
+          </article>
+       </div>
 
-  <div id = "Data">
-   <h3>資料<h3>
-   <h5>SSCCなんでも解説書<h5>
-   <p>部長引継ぎ資料<p>
-   <p>飛龍祭シフト表<p>
-   <p></p>
-  </div>
+       <div id = "Data">
+         <h3>資料<h3>
+         <h5>SSCCなんでも解説書<h5>
+         <p>部長引継ぎ資料<p>
+         <p>飛龍祭シフト表<p>
+         <p></p>
+       </div>
      
-  <div id = "GamePost">
-   <h3>ゲーム投稿場所</h3>
-   <p id = "basic">ここは公式サイトに乗せるゲームを投稿するための場所となります。<br>投稿の際は、<br>作品名、<br>制作者名（本名でなくても可）<br>作品へのリンク<br>ロゴ画像<br>作品の説明<br>をお書きください。<br>くれぐれも関係のない書き込みは慎んでいただくようよろしくお願いします。<br>また、投稿していただいたものは、公式ホームページへの転載完了次第、こちらのほうで削除させていただきます。</p>
-  <label>作品名（必須）：<input type = "text" id = "name"><br></label>
-  <label>制作者名（必須）：<input type = "text" id = "creator"><br></label>
-  <label>作品URL（必須）：<input type = "text" id = "gameURL"><br></label>
-  <label>作品ロゴ（画像）（必須）：<br><input type="file" accept="image/*"><br></label>
-  <label>作品の説明（必須）：<textarea id = "gameDiscription" cols="30" rows="5"></textarea><br></label>
-  <button type="button" onclick = "FormEntered()">確認する</button>
-  </div>
+       <div id = "GamePost">
+         <h3>ゲーム投稿場所</h3>
+         <p id = "basic">ここは公式サイトに乗せるゲームを投稿するための場所となります。<br>投稿の際は、<br>作品名、<br>制作者名（本名でなくても可）<br>作品へのリンク<br>ロゴ画像<br>作品の説明<br>をお書きください。<br>くれぐれも関係のない書き込みは慎んでいただくようよろしくお願いします。<br>また、投稿していただいたものは、公式ホームページへの転載完了次第、こちらのほうで削除させていただきます。</p>
+         <label>作品名（必須）：<input type = "text" id = "name"><br></label>
+         <label>制作者名（必須）：<input type = "text" id = "creator"><br></label>
+         <label>作品URL（必須）：<input type = "text" id = "gameURL"><br></label>
+         <label>作品ロゴ（画像）（必須）：<br><input type="file" accept="image/*"><br></label>
+         <label>作品の説明（必須）：<textarea id = "gameDiscription" cols="30" rows="5"></textarea><br></label>
+         <button type="button" onclick = "FormEntered()">確認する</button>
+       </div>
 
-  <div id = "usefulURL">
-    <h3>お役立ちリンク集</h3>
-    <p>ここでは、開発に役立つお役立ちリンクを紹介します。</p>
-    <ul>
-     <li><a href = "https://www.sejuku.net/blog/">侍エンジニアBlog</a></li>
-     <li><a href = "https://unity.com/">Unity公式サイト</a></li>
-     <li><a href = "https://nn-hokuson.hatenablog.com/">おもちゃラボ</a></li>
-     <li><a href = "https://feynman.co.jp/unityforest/">Unity入門の森</a></li>
-     <li><a href = "https://pipoya.net/sozai/">ぴぽや倉庫</a></li>
-     <li><a href = "https://learn.microsoft.com/ja-jp/dotnet/csharp/">C#公式ドキュメント</a></li>
-    </ul>
-  </div>
-
- </main>
-
- <!----- メインコンテンツ END ----->
+       <div id = "usefulURL">
+         <h3>お役立ちリンク集</h3>
+         <p>ここでは、開発に役立つお役立ちリンクを紹介します。</p>
+         <ul>
+           <li><a href = "https://www.sejuku.net/blog/">侍エンジニアBlog</a></li>
+           <li><a href = "https://nn-hokuson.hatenablog.com/">おもちゃラボ</a></li>
+           <li><a href = "https://feynman.co.jp/unityforest/">Unity入門の森</a></li>
+           <li><a href = "https://pipoya.net/sozai/">ぴぽや倉庫</a></li>
+         </ul>
+       </div>
+     </main>
+   <!----- メインコンテンツ END ----->
  
- <!----- フッター ----->
- <footer>©渋渋コンピューター部. All rights reserved.</footer>
- <!----- フッター END ----->
- <script src = "script.js"></script>
- </body>
+   <!----- フッター ----->
+     <footer>©渋渋コンピューター部. All rights reserved.</footer>
+   <!----- フッター END ----->
+     <script src = "script.js"></script>
+   </body>
  </html>
