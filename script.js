@@ -4,6 +4,7 @@ const sections = {
   Home: 'Home',
   Tutorial: 'Tutorial',
   Data: 'Data',
+  GamePost: 'GamePost',
   UsefulURL: 'usefulURL'
 };
 
