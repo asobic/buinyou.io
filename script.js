@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   showSection('Home');
 });
 
+//セクション表示切り替え関数
 function showSection(sectionId) {
   Object.keys(sections).forEach(id => {
     const sectionEl = document.getElementById(id);
