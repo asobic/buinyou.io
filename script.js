@@ -14,30 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
   showSection('Home');
 });
 
-// セクション表示切り替え関数
 function showSection(sectionId) {
   Object.keys(sections).forEach(id => {
     const sectionEl = document.getElementById(id);
-    const tabEl = document.querySelector(`.class${sections[id]}`);
 
     // セクションの表示・非表示
     if (sectionEl) {
       sectionEl.hidden = id !== sectionId;
     }
 
-    // タブの色変更
-    if (tabEl) {
+    // 対象のタブをすべて取得（button と a）
+    const tabEls = document.querySelectorAll(`.class${sections[id]}`);
+    tabEls.forEach(tabEl => {
       if (id === sectionId) {
-        tabEl.style.color = 'red';      // 選択中のタブを赤に
-        tabEl.style.fontWeight = 'bold'; // 見やすく
+        tabEl.style.color = 'red';
+        tabEl.style.fontWeight = 'bold';
       } else {
-        tabEl.style.color = 'black';     // その他のタブを黒に
+        tabEl.style.color = 'black';
         tabEl.style.fontWeight = 'normal';
       }
-    }
+    });
   });
 
-  // メニューを自動で閉じる
   if (Menutab) Menutab.style.display = 'none';
 }
 
