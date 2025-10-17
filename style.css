@@ -1,10 +1,18 @@
-body{
-
-      background: radial-gradient(at 20% 70%, #83cde7, transparent), radial-gradient(at 50% 30%, #f480d5, transparent), radial-gradient(at 80% 80%, #b7f179, transparent);
- 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: radial-gradient(circle at 20% 30%, #b7f179 0%, transparent 40%),
+              radial-gradient(circle at 80% 20%, #f480d5 0%, transparent 40%),
+              radial-gradient(circle at 50% 70%, #83cde7 0%, transparent 40%),
+              radial-gradient(circle at 30% 80%, #c5b3f4 0%, transparent 40%);
+  background-color: #fefefe;
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
   background-size: cover;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
+
 .heading{
   display: flex;
   background: radial-gradient(at 20% 70%, #83cde7, transparent),
