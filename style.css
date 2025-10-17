@@ -146,4 +146,6 @@ header img{
   color: white;
                 }
 }
-
+section {
+  transition: opacity 0.3s ease;
+}
