@@ -65,97 +65,114 @@ button {
   }
 }
 
-.Buttons{
+.Buttons {
   display: flex;
   color: white;
   background-color: #4169e1;
 }
-.Greeting{
+
+.Greeting {
   text-align: center;
 }
 
-.About_Us{
+.About_Us {
   text-align: left;
 }
 
-.What_We_Do{
+.What_We_Do {
   text-align: right;
 }
 
-
-
-footer{
-    background-color: navy;
-    background-size: cover;
-    padding-right: 24px;
-    padding-left: 24px;
-    color: white;
+footer {
+  background-color: navy;
+  background-size: cover;
+  padding-right: 24px;
+  padding-left: 24px;
+  color: white;
 }
 
-
-.menutab{
+.menutab {
   display: none;
-  position: fixed;         /*ページ全体に固定 */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 500vw;        
-  height: 500vh;          
+  width: 500vw;
+  height: 500vh;
   background: white;
-  z-index: 1000;           /* 他の要素より前に出す */
-  overflow-y: auto;        /* 内容が多いときスクロールできるように */
+  z-index: 1000;
+  overflow-y: auto;
   background-color: #4169e1;
 }
 
-.menutab a{
+.menutab a {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   padding: 20px;
   margin: 5vw;
   cursor: pointer;
-  font-size: clamp(16px, 5vw, 28px); 
+  font-size: clamp(16px, 5vw, 28px);
 }
 
 .yokonarabiheader {
   display: flex;
-  justify-content: space-between;  
-  align-items: top; 
+  justify-content: space-between;
+  align-items: center; /* ← 修正: top → center */
   width: 100%;
   background-image: url("0.png");
   background-size: cover;
 }
 
-header img{
+header img {
   cursor: pointer;
-  display: flex;
-  justify-content: center;
+  display: block;
   max-width: 70vw;
   height: auto;
 }
 
+/* ▼ スマホ（768px以下） */
 @media screen and (max-width: 768px) {
   .Buttons {
     display: none;
   }
-.menu-icon {
-  width: 30px;
-  height: 22px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 5px;
 
+  .menu-icon {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .menu-icon span {
+    display: block;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    color: white;
+  }
 }
 
-.menu-icon span {
-  display: block;
-  height: 4px;
-  background-color: #333;
-  border-radius: 2px;
-  color: white;
-                }
+/* ▼ PC（768px以上）でロゴを中央配置 */
+@media screen and (min-width: 768px) {
+  .yokonarabiheader {
+    justify-content: center;
+    position: relative;
+  }
+
+  .menus {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  header img {
+    margin: 0 auto;
+  }
 }
+
 section {
   transition: opacity 0.3s ease;
 }
