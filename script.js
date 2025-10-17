@@ -31,7 +31,7 @@ function showSection(sectionId) {
         tabEl.style.color = 'red';
         tabEl.style.fontWeight = 'bold';
       } else {
-        tabEl.style.color = 'black';
+        tabEl.style.color = 'white';
         tabEl.style.fontWeight = 'normal';
       }
     });
