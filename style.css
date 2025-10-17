@@ -1,15 +1,3 @@
-header {
-  background: radial-gradient(at 20% 70%, #83cde7, transparent),
-              radial-gradient(at 50% 30%, #f480d5, transparent),
-              radial-gradient(at 80% 80%, #b7f179, transparent);
-  background-color: #ffffff;
-  background-size: cover;
-  padding: 60px 20px;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
 body{
 
       background: radial-gradient(at 20% 70%, #83cde7, transparent), radial-gradient(at 50% 30%, #f480d5, transparent), radial-gradient(at 80% 80%, #b7f179, transparent);
@@ -19,6 +7,15 @@ body{
 }
 .heading{
   display: flex;
+  background: radial-gradient(at 20% 70%, #83cde7, transparent),
+              radial-gradient(at 50% 30%, #f480d5, transparent),
+              radial-gradient(at 80% 80%, #b7f179, transparent);
+  background-color: #ffffff;
+  background-size: cover;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 button {
