@@ -126,6 +126,7 @@ footer{
   justify-content: space-between;  
   align-items: top; 
   width: 100%;
+  background-image: url("0.png");
 }
 header img{
   cursor: pointer;
