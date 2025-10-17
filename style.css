@@ -73,6 +73,8 @@ button {
 
 .Buttons{
   display: flex;
+  color: white;
+  background-color: navy;
 }
 .Greeting{
   text-align: center;
