@@ -14,7 +14,10 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 header{margin: 0;}
-
+main{
+  background-image: url("main.jpeg");
+  margin: 0;
+  }
 
 button {
   padding: 0;
