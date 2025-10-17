@@ -28,7 +28,7 @@ function showSection(sectionId) {
     const tabEls = document.querySelectorAll(`.class${sections[id]}`);
     tabEls.forEach(tabEl => {
       if (id === sectionId) {
-        tabEl.style.color = 'red';
+        tabEl.style.color = 'orange';
         tabEl.style.fontWeight = 'bold';
       } else {
         tabEl.style.color = 'white';
