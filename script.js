@@ -9,12 +9,12 @@ const sections = {
 const Menutab = document.getElementById('menutab');
 const Menuicon = document.getElementById('menuicon');
 
-// 初期表示（ページ読み込み時）
+// 初期表示（DOMが読み込まれたら Home を表示）
 document.addEventListener('DOMContentLoaded', () => {
   showSection('Home');
 });
 
-//セクション表示切り替え関数
+// セクション表示切り替え
 function showSection(sectionId) {
   Object.keys(sections).forEach(id => {
     const sectionEl = document.getElementById(id);
@@ -37,13 +37,14 @@ function showSection(sectionId) {
     });
   });
 
-  if (Menutab) Menutab.style.display = 'none';
+  if (Menutab) Menutab.classList.remove('active');
 }
 
-// ナビゲーション関数を自動生成（ToHome(), ToTutorial() など）
+// ナビゲーション関数を自動生成（ToHome(), ToActivity() など）
 Object.keys(sections).forEach(id => {
   window[`To${id}`] = () => showSection(id);
 });
+
 
 if (Menuicon && Menutab) {
   Menuicon.addEventListener('click', () => {
