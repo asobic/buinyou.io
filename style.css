@@ -12,6 +12,9 @@ body {
   background-size: cover;
   font-family: 'Segoe UI', sans-serif;
 }
+main{
+  margin-right: 5vw;
+  margin-left: 5vw;}
 p{
   margin:5vw;
 }
