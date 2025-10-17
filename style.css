@@ -103,6 +103,7 @@ footer{
   background: white;
   z-index: 1000;           /* 他の要素より前に出す */
   overflow-y: auto;        /* 内容が多いときスクロールできるように */
+  background-color: #4169e1;
 }
 
 .menutab a{
