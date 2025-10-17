@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   padding: 0;
   height: 100vh;
   margin-right: 5vw;
@@ -94,6 +93,7 @@ footer {
   padding-right: 24px;
   padding-left: 24px;
   color: white;
+  margin: 0;
 }
 
 .menutab {
