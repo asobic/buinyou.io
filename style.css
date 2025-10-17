@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  margin-right: 5vw;
+  margin-left: 5vw;
   background: radial-gradient(circle at 20% 30%, #b7f179 0%, transparent 40%),
               radial-gradient(circle at 80% 20%, #f480d5 0%, transparent 40%),
               radial-gradient(circle at 50% 70%, #83cde7 0%, transparent 40%),
@@ -12,19 +14,9 @@ body {
   background-size: cover;
   font-family: 'Segoe UI', sans-serif;
 }
-main{
-  margin-right: 5vw;
-  margin-left: 5vw;}
-p{
-  margin:5vw;
-}
-h4{
-  margin-left: 5vw;
-  margin-right: 5vw;
-}
-h3{
-  margin-left: 5vw;
-}
+header{margin: 0;}
+
+
 button {
   padding: 0;
   font-family: inherit;
