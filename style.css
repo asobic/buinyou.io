@@ -18,7 +18,7 @@ main{
 header, main, footer {
 
   padding: 0 5vw; 
-  box-sizing: border-box;
+  width: 100%;
   }
 button {
   padding: 0;
